@@ -1,0 +1,85 @@
+.header{
+	margin-top: 75px;
+	
+}
+
+.button{
+	display:inline-block;
+	width: 15%;
+	margin-left: auto;
+}
+.buttonbar{
+	width: 70%;
+	margin-left: auto;
+}
+body{
+	background-image: url("../img/background.png");
+	background-size: 100%;
+	background-repeat: repeat-y;
+}
+.content_center{
+	width: 80%;
+	margin-left: 15%;
+}
+.clublogo{
+	display: inline-block;
+	width: 355px;
+	height: 473px;
+	background-image: url("../img/clublogo.png");
+}
+.clubinfo{
+	margin-left: 15px;
+	display: inline-block;
+	width: 542px;
+	height: 371px;
+	background-image: url("../img/hometable.png");
+}
+.tablecontent{
+	width: 759px;
+	height: 733px;
+	margin-top : 10px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url("../img/tablecontent.png");    
+}
+select{
+	margin-left: 50px;
+	margin-top: 20px;
+	width: 117px;
+	color: white;
+	background-color: #265771;
+	margin-right: 20px;
+	border: 0px solid white;
+}
+.searchtext{
+	width: 333px;
+	color: white;
+	background-color: #265771;
+	border: 0px solid white;
+}
+
+tbody tr:nth-child(odd) {
+
+    background-color: #477994;
+}
+tbody tr:nth-child(even) {
+    background-color: #19506e;
+}
+tr{
+	background-color: #076192;
+	text-align: center;
+}
+contentsave{
+	width : 70%;
+	margin-right : auto;
+	margin-left : auto;
+	margin-bottom : auto;
+	margin-top : 30px;
+	color : white;
+	height: 600px;
+	border : 1px solid #076192;    
+    overflow : scroll
+}
+tr{
+	line-height: 25px;
+}
