@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -8,11 +7,16 @@ namespace PlayerManagement.Models
 {
     public class PlayerAchievement
     {
+<<<<<<< HEAD
         
         [Required]       
         public String achievementName { get; set; }
 
         [Required]
+=======
+        public String playerID { get; set; }
+        public String achievementName { get; set; }
+>>>>>>> parent of a6bfc22... Added [Key] for id
         public int number { get; set; }
 
         [Key]
