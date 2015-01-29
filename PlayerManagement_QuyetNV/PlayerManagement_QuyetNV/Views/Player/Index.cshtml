@@ -50,9 +50,7 @@
                 </thead>
                 <tbody>
                     @foreach (var item in Model) {
-                        <tr>
-                            
-                           
+                        <tr>                                                       
                             <td>
                                 @Html.ActionLink(item.name, "Details", new { id = item.id }, null);
                             </td>
