@@ -17,6 +17,7 @@ namespace PlayerManagement.Models
 
         [Key]
         public String playerId { get; set; }
+
                
         public PlayerAchievement()
         {

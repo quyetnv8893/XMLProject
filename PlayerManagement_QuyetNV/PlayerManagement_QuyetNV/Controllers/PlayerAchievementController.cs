@@ -10,7 +10,8 @@ namespace PlayerManagement_QuyetNV.Controllers
     public class PlayerAchievementController : Controller
     {
         // GET: PlayerAchievement
-        private IPlayerAchievementRepository _repository;        
+        private IPlayerAchievementRepository _repository;
+        private IPlayerRepository _playerRepository;
 
         public PlayerAchievementController(): this(new PlayerAchievementRepository())
         {
@@ -20,7 +21,7 @@ namespace PlayerManagement_QuyetNV.Controllers
         {
             _repository = repository;
         }
-
+        
 
         public ActionResult ShowAchievementsList(String playerID)
         {
@@ -29,7 +30,8 @@ namespace PlayerManagement_QuyetNV.Controllers
     
 
         public ActionResult Create()
-        {            
+        {
+            //ViewBag.PossiblePlayers = _playerRepository.GetPlayers();   
             return View();
         }
 

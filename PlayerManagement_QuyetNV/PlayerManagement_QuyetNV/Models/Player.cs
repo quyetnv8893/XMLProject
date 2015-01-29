@@ -22,7 +22,6 @@ namespace PlayerManagement.Models
         public DateTime dateOfBirth { get; set; }
         [Required]
         public string placeOfBirth { get; set; }
-        //TODO: Remember to change variable name
         [Required]
         public double weight { get; set; }
         [Required]
@@ -33,7 +32,6 @@ namespace PlayerManagement.Models
         public String imageLink { get; set; }
         [Required]
         public Boolean status { get; set; }
-
 
 
         public Player(String clubName, String id, int number, String name, String position,
