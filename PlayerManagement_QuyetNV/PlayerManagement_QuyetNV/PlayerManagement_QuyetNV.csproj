@@ -119,7 +119,10 @@
     </Compile>
     <Compile Include="Models\Achievement.cs" />
     <Compile Include="Models\AchievementRepository.cs" />
+    <Compile Include="Models\Coach.cs" />
+    <Compile Include="Models\CoachRepository.cs" />
     <Compile Include="Models\IAchievementRepository.cs" />
+    <Compile Include="Models\ICoachRepository.cs" />
     <Compile Include="Models\IPlayerAchievementRepository.cs" />
     <Compile Include="Models\IPlayerRepository.cs" />
     <Compile Include="Models\Player.cs" />

@@ -26,18 +26,7 @@ namespace PlayerManagement.Models
         }
 
         public IEnumerable<PlayerAchievement> GetPlayerAchievementsByPlayerID(String playerID)
-        {
-            /*
-            XDocument achievementData = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
-            var achievements = from achievement in playerAchievementData.Descendants("player_achievement")
-                               where String.Equals(achievement.Element("playerID").Value, playerID)
-                                     select new PlayerAchievement((int)achievement.Element("number"), achievement.Element("playerID").Value,
-                                         achievement.Element("achievementName").Value);
-
-            List<PlayerAchievement> allAchievements = new List<PlayerAchievement>();
-            allAchievements.AddRange(achievements.ToList<PlayerAchievement>());
-            return allAchievements;            
-             */
+        {      
             return allPlayerAchievements.FindAll(item => item.playerID.Equals(playerID));
         }
 
