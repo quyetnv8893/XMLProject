@@ -72,7 +72,16 @@ namespace PlayerManagement.Models
 
         public void EditPlayerAchievement(PlayerAchievement playerAchievement)
         {
-            throw new NotImplementedException();
+            XElement node = playerAchievementData.Descendants("players_achievements").Elements("player_achievement")
+                .Where(i => i.Element("playerID").Value.Equals(playerAchievement.playerID))
+                .Where(i => i.Element("achievementName").Value.Equals(playerAchievement.achievementName))
+                .FirstOrDefault();
+
+            node.SetElementValue("number", playerAchievement.number);
+            node.SetElementValue("playerID", playerAchievement.playerID);
+            node.SetElementValue("achievementName", playerAchievement.achievementName);            
+
+            playerAchievementData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
         }
     }
 }
