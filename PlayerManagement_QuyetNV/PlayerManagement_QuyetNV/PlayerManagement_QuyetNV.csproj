@@ -200,10 +200,10 @@
     <Content Include="Views\Coach\Create.cshtml" />
     <Content Include="Views\Coach\Edit.cshtml" />
     <Content Include="Views\Coach\Delete.cshtml" />
+    <Content Include="Views\PlayerAchievement\ShowAchievementsList.cshtml" />
+    <Content Include="Views\PlayerAchievement\Edit.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\PlayerAchievement\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

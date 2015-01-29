@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlayerManagement.Models
 {
-    interface IPlayerAchievementRepository
+    public interface IPlayerAchievementRepository
     {        
         IEnumerable<PlayerAchievement> GetPlayerAchievementsByPlayerID(String playerID);
         PlayerAchievement GetPlayerAchievementByAchievementName(String playerID, String achievementName);

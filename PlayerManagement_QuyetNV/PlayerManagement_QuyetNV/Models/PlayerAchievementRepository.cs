@@ -27,7 +27,7 @@ namespace PlayerManagement.Models
 
         public IEnumerable<PlayerAchievement> GetPlayerAchievementsByPlayerID(String playerID)
         {      
-            return allPlayerAchievements.FindAll(item => item.playerID.Equals(playerID));
+            return allPlayerAchievements.FindAll(item => item.playerId.Equals(playerID));
         }
 
         public PlayerAchievement GetPlayerAchievementByAchievementName(String playerID, String achievementName)
@@ -42,7 +42,7 @@ namespace PlayerManagement.Models
             
             
             playerAchievementData.Descendants("player_achievement").FirstOrDefault().Add(new XElement("player_achievement", 
-                new XElement("number", playerAchievement.number), new XElement("playerID"), playerAchievement.playerID),
+                new XElement("number", playerAchievement.number), new XElement("playerID"), playerAchievement.playerId),
                 new XElement("achievementName"), playerAchievement.achievementName);
 
             playerAchievementData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
@@ -62,12 +62,12 @@ namespace PlayerManagement.Models
         public void EditPlayerAchievement(PlayerAchievement playerAchievement)
         {
             XElement node = playerAchievementData.Descendants("players_achievements").Elements("player_achievement")
-                .Where(i => i.Element("playerID").Value.Equals(playerAchievement.playerID))
+                .Where(i => i.Element("playerID").Value.Equals(playerAchievement.playerId))
                 .Where(i => i.Element("achievementName").Value.Equals(playerAchievement.achievementName))
                 .FirstOrDefault();
 
             node.SetElementValue("number", playerAchievement.number);
-            node.SetElementValue("playerID", playerAchievement.playerID);
+            node.SetElementValue("playerID", playerAchievement.playerId);
             node.SetElementValue("achievementName", playerAchievement.achievementName);            
 
             playerAchievementData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));

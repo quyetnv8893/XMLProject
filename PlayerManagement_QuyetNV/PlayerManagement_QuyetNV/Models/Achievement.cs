@@ -7,8 +7,7 @@ using System.Web;
 namespace PlayerManagement.Models
 {
     public class Achievement
-    {
-        [Required]
+    {        
         [Key]
         public String name { get; set; }
         [Required]

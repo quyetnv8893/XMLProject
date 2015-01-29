@@ -98,6 +98,13 @@
             @Html.DisplayFor(model => model.status)
         </dd>
 
+        <dd>
+            Achievement
+        </dd>
+        <dt>
+            @Html.Action("ShowAchievementsList", "PlayerAchievement", new { playerID = Model.id})
+        </dt>
+
     </dl>
 </div>
 <p>

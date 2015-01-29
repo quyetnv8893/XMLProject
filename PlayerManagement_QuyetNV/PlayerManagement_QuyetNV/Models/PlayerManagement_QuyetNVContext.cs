@@ -20,6 +20,8 @@ namespace PlayerManagement_QuyetNV.Models
         }
 
         public System.Data.Entity.DbSet<PlayerManagement_QuyetNV.Models.Coach> Coaches { get; set; }
+
+        public System.Data.Entity.DbSet<PlayerManagement.Models.PlayerAchievement> PlayerAchievements { get; set; }
     
     }
 }

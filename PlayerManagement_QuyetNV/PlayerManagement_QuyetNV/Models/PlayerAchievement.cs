@@ -8,23 +8,25 @@ namespace PlayerManagement.Models
 {
     public class PlayerAchievement
     {
-        [Key]
-        [Required]
-        public String playerID { get; set; }               
-        [Required]
+        
+        [Required]       
         public String achievementName { get; set; }
+
         [Required]
         public int number { get; set; }
 
+        [Key]
+        public String playerId { get; set; }
+               
         public PlayerAchievement()
         {
-            this.playerID = null;
+            this.playerId = null;
             this.achievementName = null;
             this.number = 0;
         }
 
         public PlayerAchievement(  int number, String playerID, String achievementName){
-            this.playerID = playerID;
+            this.playerId = playerID;
             this.achievementName = achievementName;
             this.number = number;
         }

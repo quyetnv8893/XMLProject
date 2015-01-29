@@ -22,9 +22,9 @@ namespace PlayerManagement_QuyetNV.Controllers
         }
 
 
-        public ActionResult ShowAchievementsList(String id)
+        public ActionResult ShowAchievementsList(String playerID)
         {
-            return View(_repository.GetPlayerAchievementsByPlayerID(id));
+            return View(_repository.GetPlayerAchievementsByPlayerID(playerID));
         }
     
 
