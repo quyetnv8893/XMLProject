@@ -1,0 +1,66 @@
+﻿@model PlayerManagement_QuyetNV.Models.Coach
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Coach</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.dateOfBirth)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.dateOfBirth)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.imageLink)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.imageLink)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.position)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.position)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.clubName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.clubName)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
