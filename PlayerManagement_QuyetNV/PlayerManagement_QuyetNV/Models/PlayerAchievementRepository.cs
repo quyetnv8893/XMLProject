@@ -62,7 +62,12 @@ namespace PlayerManagement.Models
 
         public void DeletePlayerAchievement(String playerID, String achievementName)
         {
-            throw new NotImplementedException();
+            playerAchievementData.Descendants("players_achievements").Elements("player_achievement").
+                Where(i => i.Element("playerID").Value.Equals(playerID)).
+                Where(i => i.Element("achievementName").Value.Equals(achievementName)).Remove();                    
+
+            playerAchievementData.Save(HttpContext.Current.Server.MapPath("~/App_Data/player_management.xml"));
+            
         }
 
         public void EditPlayerAchievement(PlayerAchievement playerAchievement)
