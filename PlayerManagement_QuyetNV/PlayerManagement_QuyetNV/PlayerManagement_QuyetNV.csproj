@@ -120,8 +120,11 @@
     <Compile Include="Models\Achievement.cs" />
     <Compile Include="Models\AchievementRepository.cs" />
     <Compile Include="Models\IAchievementRepository.cs" />
+    <Compile Include="Models\IPlayerAchievementRepository.cs" />
     <Compile Include="Models\IPlayerRepository.cs" />
     <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\PlayerAchievement.cs" />
+    <Compile Include="Models\PlayerAchievementRepository.cs" />
     <Compile Include="Models\PlayerRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
