@@ -32,7 +32,7 @@ namespace PlayerManagement.Models
 
         public PlayerAchievement GetPlayerAchievementByAchievementName(String playerID, String achievementName)
         {
-            
+
             return allPlayerAchievements.Find(item => (item.achievementName.Equals(achievementName)) &&
                                                         (item.achievementName.Equals(playerID)));
         }
